@@ -22,6 +22,102 @@ tags:
 **免责声明：**我之前很喜欢使用 Angular 1，不过在 2015 年转到了 React。最近我也在 Pluralsight 上发布了一门关于 [React 和 Flux 的课程](https://www.pluralsight.com/courses/react-flux-building-applications)（[免费试学](http://app.pluralsight.com/signup)）。所以，**是的，我本人是有偏见的，但我不会偏袒任何一方。**
 
 好了，我们开始吧，这场对决将会非常血腥。
+$$ \begin{aligned} \nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} = \frac{4\pi}{c}\vec{\mathbf{j}} \ \nabla \cdot \vec{\mathbf{E}} = 4 \pi \rho \ \nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} = \vec{\mathbf{0}} \ \nabla \cdot \vec{\mathbf{B}} = 0 \end{aligned} $$
+
+{% graphviz %}
+digraph test {
+
+    size="7,9.5";
+    page="8,10.5";
+    ratio=fill;
+    rankdir=LR;
+
+    { rank=same;
+      node [shape=house];
+      A;C;E;G;I;K;M;O;Q;S;U;W;Y;
+      node [shape=invhouse];
+      B;D;F;H;J;L;N;P;R;T;V;X;Z;
+    }
+
+    { rank=same;
+      node [shape=parallelogram];
+      "Parallelogram" [label="This is a test\nof a multiline\nlabel in an\nparallelogram with approx\nsquare aspect"];
+      "a ----- long thin parallelogram";
+      "xx" [label="m"];
+      "yy" [label="a\nb\nc\nd\ne\nf"];
+      node [shape=octagon];
+      "Octagon" [label="This is a test\nof a multiline\nlabel in an\noctagon with approx\nsquare aspect"];
+      node [shape=parallelogram];
+      "Parallelogram" [label="This is a test\nof a multiline\nlabel in an\nparallelogram with approx\nsquare aspect"];
+      "a ----- long thin parallelogram";
+      "zz" [label="m"];
+      "qq" [label="a\nb\nc\nd\ne\nf"];
+      ordering=out;
+    }
+
+    Parallelogram -> A;
+    Parallelogram -> B;
+    Parallelogram -> C;
+    Parallelogram -> D;
+    Parallelogram -> E;
+    Parallelogram -> F;
+    Parallelogram -> G;
+    Parallelogram -> H;
+    Parallelogram -> I;
+    Parallelogram -> J;
+    Parallelogram -> K;
+    Parallelogram -> L;
+    Parallelogram -> M;
+    Parallelogram -> N;
+    Parallelogram -> O;
+    Parallelogram -> P;
+    Parallelogram -> Q;
+    Parallelogram -> R;
+    Parallelogram -> S;
+    Parallelogram -> T;
+    Parallelogram -> U;
+    Parallelogram -> V;
+    Parallelogram -> W;
+    Parallelogram -> X;
+    Parallelogram -> Y;
+    Parallelogram -> Z;
+
+    { rank=same;
+      node [shape=triangle];
+      a;c;e;g;i;k;m;o;q;s;u;w;y;
+      node [shape=tripleoctagon];
+      b;d;f;h;j;l;n;p;r;t;v;x;z;
+    }
+
+    a -> Parallelogram -> Octagon;
+    b -> Parallelogram -> Octagon;
+    c -> Parallelogram -> Octagon;
+    d -> Parallelogram -> Octagon;
+    e -> Parallelogram -> Octagon;
+    f -> Parallelogram -> Octagon;
+    g -> Parallelogram -> Octagon;
+    h -> Parallelogram -> Octagon;
+    i -> Parallelogram -> Octagon;
+    j -> Parallelogram -> Octagon;
+    k -> Parallelogram -> Octagon;
+    l -> Parallelogram -> Octagon;
+    m -> Parallelogram -> Octagon;
+    n -> Parallelogram -> Octagon;
+    o -> Parallelogram -> Octagon;
+    p -> Parallelogram -> Octagon;
+    q -> Parallelogram -> Octagon;
+    r -> Parallelogram -> Octagon;
+    s -> Parallelogram -> Octagon;
+    t -> Parallelogram -> Octagon;
+    u -> Parallelogram -> Octagon;
+    v -> Parallelogram -> Octagon;
+    w -> Parallelogram -> Octagon;
+    x -> Parallelogram -> Octagon;
+    y -> Parallelogram -> Octagon;
+    z -> Parallelogram -> Octagon;
+}
+
+{% endgraphviz %}
 
 ![](https://cdn-images-1.medium.com/max/800/1*MRPl_SNuRGJchb6eOAnkSA.jpeg)
 
