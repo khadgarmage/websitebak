@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      "React vs Angular 2：冰与火之歌「译」"
-subtitle:   "React versus Angular 2: There Will Be Blood"
+title:      "测试"
+subtitle:   "测试"
 date:       2016-02-01 12:00:00
-author:     "Hux"
+author:     "Khadgar"
 header-img: "img/post-bg-re-vs-ng2.jpg"
 header-mask: 0.3
 catalog:    true
