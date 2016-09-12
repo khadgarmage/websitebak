@@ -5,8 +5,8 @@
     <description></description>
     <link>http://khadgar.me/</link>
     <atom:link href="http://khadgar.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 09 Sep 2016 16:06:36 +0800</pubDate>
-    <lastBuildDate>Fri, 09 Sep 2016 16:06:36 +0800</lastBuildDate>
+    <pubDate>Mon, 12 Sep 2016 15:30:09 +0800</pubDate>
+    <lastBuildDate>Mon, 12 Sep 2016 15:30:09 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -1090,11 +1090,7 @@ React     : 直接用 JS 就好啦 :)
         <link>http://khadgar.me/2016/02/01/React-vs-Angular2/</link>
         <guid isPermaLink="true">http://khadgar.me/2016/02/01/React-vs-Angular2/</guid>
         
-        <category>前端开发</category>
-        
-        <category>JavaScript</category>
-        
-        <category>译文</category>
+        <category>Test</category>
         
         
       </item>
