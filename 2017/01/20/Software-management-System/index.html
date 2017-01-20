@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>软件管理 - 卡德加的博客 | Khadgar Blog</title>
+
+    <link rel="canonical" href="http://khadgar.me/2017/01/20/Software-management-System/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?1224681c9b95443b7ce09aa53c952931";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Khadgar Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/portfolio/">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle/$collapse will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/post-bg-re-vs-ng2.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/post-bg-re-vs-ng2.jpg')
+    }
+
+    
+    header.intro-header .header-mask{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0,0,0, 0.3);
+    }
+    
+</style>
+<header class="intro-header" >
+    <div class="header-mask"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#系统管理" title="系统管理">系统管理</a>
+                        
+                        <a class="tag" href="/tags/#OPS" title="OPS">OPS</a>
+                        
+                    </div>
+                    <h1>软件管理</h1>
+                    
+                    
+                    <h2 class="subheading">System</h2>
+                    
+                    <span class="meta">Posted by Khadgar on January 20, 2017</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<h2 id="section">包安装</h2>
+<h4 id="rpm--dpkg">RPM &amp; DPKG</h4>
+<p>Linux系统安装软件的方式有几种，编译安装，rpm，dpkg等，其中主流的是rpm和dpkg。
+|Distribution代表|软件管理机制|使用指令|线上升级机制 |
+| ———— |:—:| —————:|———–: |
+|Red Hat/Fedora| RPM | rpm, rpmbuild   |YUM (yum)    |
+|Debian/Ubuntu | DPKG|   dpkg          |APT (apt-get)|</p>
+
+<h4 id="rpm--srpm">RPM &amp; SRPM</h4>
+<p>RPM是直接编译好的软件格式，可以直接安装，但是要求安装环境和RPM编辑环境一致或者相当才可以安装。SRPM是带有源码的软件，可以通过修改配置，在安装环境下先编译成RPM文件，然后再进行安装可以解决这个问题。</p>
+
+<h4 id="rpm">RPM命名介绍</h4>
+<blockquote>
+  <p>xx.rpm   &lt;==RPM的格式，已经变编译切打包完成的rpm软件;  <br />
+xx.src.rpm &lt;==SRPM的格式，包括源码，需要编译成RPM，才能安装。</p>
+</blockquote>
+
+<blockquote>
+  <p>test -        3.11   -     5        .el7.x86_64  .rpm<br />
+软件名称    软件版本 发布次数 平台 文档后缀</p>
+</blockquote>
+
+<p>i386, i586, i686, noarch, x86_64表示平台，其中noarch表示不区分平台</p>
+
+<h4 id="rpm-1">RPM安装路径</h4>
+<p>|路径|说明|
+|—-|—-|
+|/etc|配置文件目录|
+|/usr/bin|可执行文件|
+|/usr/lib|可执行文件使用的动态链接库|
+|/usr/share/doc|软件使用说明文档|
+|/usr/share/man|man page文档|</p>
+
+<h4 id="rpm-2">RPM命令</h4>
+<div class="highlighter-rouge"><pre class="highlight"><code># 安装
+rpm -ivh /mnt/xxx/test.rpm
+
+# 网络安装
+rpm -ivh http://web.com/mnt/xxx/test.rpm
+
+# --prefix /usr/local 指安装到/usr/local而非正规目录
+
+# 升级更新
+rpm -Fvh /mnt/xxx/test.rpm
+
+# 查询
+rpm -qa | grep xx
+
+# 查询配置文件路径
+rpm -qc httpd
+
+# 重建资料库
+rpm --rebuilddb
+
+</code></pre>
+</div>
+
+<h4 id="yum">YUM</h4>
+<p>yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE中的Shell前端软件包管理器。基于RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软体包，无须繁琐地一次次下载、安装。yum提供了查找、安装、删除某一个、一组甚至全部软件包的命令。</p>
+
+<h6 id="section-1">命令</h6>
+<div class="highlighter-rouge"><pre class="highlight"><code># 安装 -y提示确定自动输入y
+rpm install -y php70
+
+# 查找软件
+yum search raid
+
+# 查看软件功能 
+yum info mdadm
+
+# 列出所有软件
+yum list
+
+# 列出所有需要升级的软件
+yum list updates
+
+# 查询配置文件路径
+rpm -qc httpd
+
+# 重建资料库
+rpm --rebuilddb
+
+</code></pre>
+</div>
+
+<h6 id="section-2">配置</h6>
+<div class="highlighter-rouge"><pre class="highlight"><code>[root@study ~]# vim /etc/yum.repos.d/CentOS-Base.repo
+[base]
+name=CentOS-$releasever - Base
+mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=os&amp;infra=$infra
+#baseurl=http://mirror.centos.org/centos/$releasever/os/$basearch/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+</code></pre>
+</div>
+<ul>
+  <li>[base]：软件库的名字，中括号必须有，里面的名称随意取，但是不能重复。</li>
+  <li>name：名字而已。</li>
+  <li>mirrorlist=：列出软件库可以使用的镜像列表，如果设置yum会自动挑选镜像。</li>
+  <li>baseurl=：可以指定的固定软件库地址。</li>
+  <li>enable=1：1启用，0不启用</li>
+  <li>gpgcheck=1：指定是否需要查阅 RPM 档桉内的数位签名</li>
+</ul>
+
+<p>修改完配置需要执行yum clean all，使得配置修改生效~</p>
+
+<h6 id="section-3">软件库</h6>
+<ul>
+  <li>每个系统都会有官方和第三方提供的软件库，如CentOS库的链接
+https://www.centos.org/docs/5/html/yum/sn-yum-maintenance.html
+https://wiki.centos.org/AdditionalResources/Repositories</li>
+  <li>其中PHP常用的YUM Repository如下:<br />
+webtatic https://webtatic.com/<br />
+remi http://rpms.remirepo.net/<br />
+基于稳定性考虑，建议官方列表里推荐的remi</li>
+</ul>
+
+<h2 id="section-4">编译安装</h2>
+<p><code class="highlighter-rouge">./configure &amp;&amp; make &amp;&amp; make install</code></p>
+<ul>
+  <li>configure 根据系统环境和选项配置，生成Makefile文件
+    <div class="highlighter-rouge"><pre class="highlight"><code>--srcdir=DIR
+源代码文件所在目录，默认为configure脚本所在目录或其父目录。
+--prefix=PREFIX
+体系无关文件的顶级安装目录PREFIX ，默认值一般是 /usr/local 或 /usr/local/pkgName
+--exec-prefix=EPREFIX
+体系相关文件的顶级安装目录EPREFIX ，默认值一般是 PREFIX
+--bindir=DIR
+用户可执行文件的存放目录DIR ，默认值一般是 EPREFIX/bin
+--sbindir=DIR
+系统管理员可执行目录DIR ，默认值一般是 EPREFIX/sbin
+--libexecdir=DIR
+程序可执行目录DIR ，默认值一般是 EPREFIX/libexec
+--datadir=DIR
+通用数据文件的安装目录DIR ，默认值一般是 PREFIX/share
+--sysconfdir=DIR
+只读的单一机器数据目录DIR ，默认值一般是 PREFIX/etc
+--sharedstatedir=DIR
+可写的体系无关数据目录DIR ，默认值一般是 PREFIX/com
+--localstatedir=DIR
+可写的单一机器数据目录DIR ，默认值一般是 PREFIX/var
+--libdir=DIR
+库文件的安装目录DIR ，默认值一般是 EPREFIX/lib
+--includedir=DIR
+C头文件目录DIR ，默认值一般是 PREFIX/include
+--oldincludedir=DIR
+非gcc的C头文件目录DIR ，默认值一般是 /usr/include
+--infodir=DIR
+Info文档的安装目录DIR ，默认值一般是 PREFIX/info
+--mandir=DIR
+Man文档的安装目录DIR ，默认值一般是 PREFIX/man
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start -->
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="/2017/01/20/Software-management-System"
+                    data-title="软件管理"
+                    data-url="http://khadgar.me/2017/01/20/Software-management-System/"
+                    data-images="http://khadgar.me/img/post-bg-re-vs-ng2.jpg"
+                    data-content="包安装
+RPM &amp; DPKG
+Linux系统安装软件的方式有几种，编译安装，rpm，dpkg等，其中主流的是rpm和dpkg。
+|Distribu... | 卡德加的博客 | Khadgar Blog " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+
+                <ul class="pager">
+                    
+                    
+                </ul>
+
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="/2017/01/20/Software-management-System"
+                        data-title="软件管理"
+                        data-url="http://khadgar.me/2017/01/20/Software-management-System/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+        
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+        				
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href=""></a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = 'khadgarmage';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    
+
+
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Khadgar Blog 2017
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/ 
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers   
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async('/js/jquery.tagcloud.js',function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'khadgar.me';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!-- Side Catalog -->
+
+<script type="text/javascript">
+    function generateCatalog (selector) {
+        var P = $('div.post-container'),a,n,t,l,i,c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#"+$(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
+            l = $('<li class="'+n+'_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;    
+    }
+
+    generateCatalog(".catalog-body");
+
+    // toggle side catalog
+    $(".catalog-toggle").click((function(e){
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Hux to support padding
+     */
+    async("/js/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
