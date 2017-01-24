@@ -42,6 +42,7 @@ kramdown:
   input: GFM
   extensions:
     - autolink
+    - tables
     - footnotes
     - smart
   enable_coderay: true

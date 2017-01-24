@@ -14,9 +14,10 @@ tags:
 
 ## 包安装
 #### RPM & DPKG
-Linux系统安装软件的方式有几种，编译安装，rpm，dpkg等，其中主流的是rpm和dpkg。
+Linux系统安装软件的方式有几种，编译安装，rpm，dpkg等，其中主流的是rpm和dpkg。  
+
 |Distribution代表|软件管理机制|使用指令|线上升级机制 |
-| ------------ |:---:| ---------------:|-----------: |
+|:------------ |:---|:---------------|:-----------|
 |Red Hat/Fedora| RPM | rpm, rpmbuild   |YUM (yum)    |
 |Debian/Ubuntu | DPKG|   dpkg          |APT (apt-get)|
 
@@ -157,3 +158,5 @@ Info文档的安装目录DIR ，默认值一般是 PREFIX/info
 Man文档的安装目录DIR ，默认值一般是 PREFIX/man
 ```
 
+## Refrence
+* http://linux.vbird.org/linux_basic/0520rpm_and_srpm.php
