@@ -216,11 +216,32 @@
 
 				<h2 id="section">包安装</h2>
 <h4 id="rpm--dpkg">RPM &amp; DPKG</h4>
-<p>Linux系统安装软件的方式有几种，编译安装，rpm，dpkg等，其中主流的是rpm和dpkg。
-|Distribution代表|软件管理机制|使用指令|线上升级机制 |
-| ———— |:—:| —————:|———–: |
-|Red Hat/Fedora| RPM | rpm, rpmbuild   |YUM (yum)    |
-|Debian/Ubuntu | DPKG|   dpkg          |APT (apt-get)|</p>
+<p>Linux系统安装软件的方式有几种，编译安装，rpm，dpkg等，其中主流的是rpm和dpkg。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Distribution代表</th>
+      <th style="text-align: left">软件管理机制</th>
+      <th style="text-align: left">使用指令</th>
+      <th style="text-align: left">线上升级机制</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Red Hat/Fedora</td>
+      <td style="text-align: left">RPM</td>
+      <td style="text-align: left">rpm, rpmbuild</td>
+      <td style="text-align: left">YUM (yum)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Debian/Ubuntu</td>
+      <td style="text-align: left">DPKG</td>
+      <td style="text-align: left">dpkg</td>
+      <td style="text-align: left">APT (apt-get)</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="rpm--srpm">RPM &amp; SRPM</h4>
 <p>RPM是直接编译好的软件格式，可以直接安装，但是要求安装环境和RPM编辑环境一致或者相当才可以安装。SRPM是带有源码的软件，可以通过修改配置，在安装环境下先编译成RPM文件，然后再进行安装可以解决这个问题。</p>
@@ -370,6 +391,10 @@ Man文档的安装目录DIR ，默认值一般是 PREFIX/man
   </li>
 </ul>
 
+<h2 id="refrence">Refrence</h2>
+<ul>
+  <li>http://linux.vbird.org/linux_basic/0520rpm_and_srpm.php</li>
+</ul>
 
 
                 <hr>
@@ -386,7 +411,10 @@ Man文档的安装目录DIR ，默认值一般是 PREFIX/man
                     data-content="包安装
 RPM &amp; DPKG
 Linux系统安装软件的方式有几种，编译安装，rpm，dpkg等，其中主流的是rpm和dpkg。
-|Distribu... | 卡德加的博客 | Khadgar Blog " >
+
+
+  
+    ... | 卡德加的博客 | Khadgar Blog " >
                     <div class="ds-share-inline">
                       <ul  class="ds-share-icons-16">
                         <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>

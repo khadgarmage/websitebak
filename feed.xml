@@ -5,19 +5,40 @@
     <description></description>
     <link>http://khadgar.me/</link>
     <atom:link href="http://khadgar.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 20 Jan 2017 19:13:04 +0800</pubDate>
-    <lastBuildDate>Fri, 20 Jan 2017 19:13:04 +0800</lastBuildDate>
+    <pubDate>Tue, 24 Jan 2017 11:11:22 +0800</pubDate>
+    <lastBuildDate>Tue, 24 Jan 2017 11:11:22 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>软件管理</title>
         <description>&lt;h2 id=&quot;section&quot;&gt;包安装&lt;/h2&gt;
 &lt;h4 id=&quot;rpm--dpkg&quot;&gt;RPM &amp;amp; DPKG&lt;/h4&gt;
-&lt;p&gt;Linux系统安装软件的方式有几种，编译安装，rpm，dpkg等，其中主流的是rpm和dpkg。
-|Distribution代表|软件管理机制|使用指令|线上升级机制 |
-| ———— |:—:| —————:|———–: |
-|Red Hat/Fedora| RPM | rpm, rpmbuild   |YUM (yum)    |
-|Debian/Ubuntu | DPKG|   dpkg          |APT (apt-get)|&lt;/p&gt;
+&lt;p&gt;Linux系统安装软件的方式有几种，编译安装，rpm，dpkg等，其中主流的是rpm和dpkg。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Distribution代表&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;软件管理机制&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;使用指令&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;线上升级机制&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Red Hat/Fedora&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;RPM&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;rpm, rpmbuild&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;YUM (yum)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Debian/Ubuntu&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;DPKG&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;dpkg&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;APT (apt-get)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;h4 id=&quot;rpm--srpm&quot;&gt;RPM &amp;amp; SRPM&lt;/h4&gt;
 &lt;p&gt;RPM是直接编译好的软件格式，可以直接安装，但是要求安装环境和RPM编辑环境一致或者相当才可以安装。SRPM是带有源码的软件，可以通过修改配置，在安装环境下先编译成RPM文件，然后再进行安装可以解决这个问题。&lt;/p&gt;
@@ -167,6 +188,10 @@ Man文档的安装目录DIR ，默认值一般是 PREFIX/man
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&quot;refrence&quot;&gt;Refrence&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;http://linux.vbird.org/linux_basic/0520rpm_and_srpm.php&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Fri, 20 Jan 2017 00:00:00 +0800</pubDate>
         <link>http://khadgar.me/2017/01/20/Software-management-System/</link>
