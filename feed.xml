@@ -5,9 +5,132 @@
     <description></description>
     <link>http://khadgar.me/</link>
     <atom:link href="http://khadgar.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 24 Jan 2017 11:11:22 +0800</pubDate>
-    <lastBuildDate>Tue, 24 Jan 2017 11:11:22 +0800</lastBuildDate>
+    <pubDate>Wed, 14 Feb 2018 10:32:00 +0800</pubDate>
+    <lastBuildDate>Wed, 14 Feb 2018 10:32:00 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>软件管理</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;包管理工具&lt;/h2&gt;
+&lt;p&gt;软件开发过程中，会用到第三方库，但是这些第三方库或者框架往往又依赖其他第三方库或者框架，如果手工管理依赖关系会非常复杂，因为不仅要下载而且还要处理包之间的兼容关系，并且如果要进行更新版本那更是痛苦。&lt;br /&gt;
+其主要功能就是安装及安装依赖，更新，卸载等操作。&lt;/p&gt;
+
+&lt;h4 id=&quot;section-1&quot;&gt;主流包管理工具&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;语言&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;包管理工具&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;配置文件&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Node.js&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;NPM&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;package.json&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;前端JS&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Bower&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;bower.json&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Java&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Maven&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;pom.xml&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Python&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Pip&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;pip.conf(ini)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Ruby&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Gem&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;.gemspec&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Php&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Composer&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;composer.json&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;php&quot;&gt;PHP包管理工具&lt;/h4&gt;
+&lt;p&gt;PHP包管理工具有PEAR，PECL，Composer。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;PEAR&lt;br /&gt;
+Php Extension Application Repository php 扩展和应用仓库，为 php 的工具类库。&lt;/li&gt;
+  &lt;li&gt;PECL&lt;br /&gt;
+PHP Extension Community Library php 的 C 扩展仓库，即 php 的 so 格式的扩展&lt;/li&gt;
+  &lt;li&gt;Composer&lt;br /&gt;
+PHP依赖管理工具
+    &lt;h6 id=&quot;pear-vs-pecl&quot;&gt;PEAR VS PECL&lt;/h6&gt;
+    &lt;p&gt;PEAR是用PHP写的库，PECL是用C写的PHP扩展库。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#这是一个安装 pear 的 php 发行包文件
+wget http://pear.php.net/go-pear.phar
+
+#执行安装pear和pecl
+php go-pear.phar
+
+#pear安装DB
+pear install DB
+
+#pecl安装Redis,生成redis.so，加入到php.ini即可
+pecl install redis
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h6 id=&quot;pear-vs-composer&quot;&gt;PEAR VS Composer&lt;/h6&gt;
+&lt;p&gt;两者都可以用来管理PHP软件包，安装、更新以及卸载。
+PEAR对于包的维护者来说，比较麻烦。所以很多代码已经过期了；此外相比Composer，PEAR的安装软件包比较少；使用Composer，可以基于每个项目或者全局安装软件包，而PEAR只能全局安装，如果需要不同版本的话可能造成冲突；Composer通过配置可以安装PEAR扩展包.&lt;/p&gt;
+
+&lt;h2 id=&quot;composer&quot;&gt;Composer&lt;/h2&gt;
+&lt;h4 id=&quot;section-2&quot;&gt;安装&lt;/h4&gt;
+&lt;p&gt;Composer要求PHP环境必须是5.3.2+才能运行。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h4 id=&quot;section-3&quot;&gt;使用&lt;/h4&gt;
+&lt;p&gt;在项目目录下创建一个 composer.json 文件，指明依赖，比如，你的项目依赖 monolog：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;require&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;monolog/monolog&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1.2.*&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;安装&lt;br /&gt;
+composer install&lt;/li&gt;
+  &lt;li&gt;自动加载&lt;br /&gt;
+Composer 提供了自动加载的特性，require ‘vendor/autoload.php’，需要在代码初始化时增加这行代码。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;延伸阅读 https://getcomposer.org/&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 06 Feb 2017 00:00:00 +0800</pubDate>
+        <link>http://khadgar.me/2017/02/06/Software-management-Software/</link>
+        <guid isPermaLink="true">http://khadgar.me/2017/02/06/Software-management-Software/</guid>
+        
+        <category>软件</category>
+        
+        <category>依赖管理</category>
+        
+        <category>PHP</category>
+        
+        
+      </item>
     
       <item>
         <title>软件管理</title>
