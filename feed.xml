@@ -5,9 +5,304 @@
     <description></description>
     <link>http://khadgar.me/</link>
     <atom:link href="http://khadgar.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 14 Feb 2018 10:32:00 +0800</pubDate>
-    <lastBuildDate>Wed, 14 Feb 2018 10:32:00 +0800</lastBuildDate>
+    <pubDate>Sat, 19 May 2018 21:17:50 +0800</pubDate>
+    <lastBuildDate>Sat, 19 May 2018 21:17:50 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>PHP</title>
+        <description>&lt;h2 id=&quot;mongo&quot;&gt;mongo扩展&lt;/h2&gt;
+&lt;p&gt;PHP的Mongodb扩展有两种, mongo.so和 mongodb.so,其中mongodb.so为最新的扩展，mongo.so已经不推荐使用。&lt;/p&gt;
+&lt;h4 id=&quot;mongophp&quot;&gt;mongo扩展版本对应PHP版本&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;PHP Driver&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;PHP 5.3&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;PHP 5.4&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;PHP 5.5&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;PHP 5.6&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;PHP 7.0&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;PHP 7.1&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;PHP 7.2&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;mongodb-1.4&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;mongodb-1.3&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;mongodb-1.2&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;mongodb-1.1&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;mongodb-1.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;mongo-1.6&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;mongo-1.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;mongo-1.4&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;mongo-1.3&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;mongomongodb&quot;&gt;mongo扩展版本对应mongodb的版本&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;PHP Driver&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;MongoDB 2.6&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;MongoDB 3.0&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;MongoDB 3.2&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;MongoDB 3.4&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;MongoDB 3.6&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;PHPLIB 1.3 + mongodb-1.4&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;PHPLIB 1.2 + mongodb-1.3&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;PHPLIB 1.1 + mongodb-1.2&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;PHPLIB 1.0 + mongodb-1.1&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;mongodb-1.0&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;mongo-1.6&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;mongo-1.5&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;mongo-1.4&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;✓&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;mongoso&quot;&gt;mongo.so用法&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/en/book.mongo.php&quot; target=&quot;_blank&quot;&gt;传送门&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;mongodbso&quot;&gt;mongodb.so用法&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/en/set.mongodb.php&quot; target=&quot;_blank&quot;&gt;传送门&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;no-candidate-servers-foundmongoso&quot;&gt;No candidate servers found(mongo.so扩展)&lt;/h2&gt;
+&lt;h4 id=&quot;mongodbphp&quot;&gt;原因一: mongodb配置的地址和php里使用的地址不一致&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;mongodb server配置为机器名而php里使用的链接地址是ip&lt;/li&gt;
+  &lt;li&gt;mongodb server配置为ip而php里使用的链接地址是机器名&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;扩展C相关代码&lt;/p&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c1&quot;&gt;//connections.c&amp;gt;mongo_discover_topology&amp;gt;mongo_connection_ismaster
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bson_find_field_as_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ptr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;me&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connected_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;we_think_we_are&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mongo_server_hash_to_server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;con&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strcmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connected_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;we_think_we_are&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;mongo_manager_log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;manager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MLOG_CON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MLOG_FINE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ismaster: the server name matches what we thought it&#39;d be (%s).&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;we_think_we_are&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;mongo_manager_log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;manager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MLOG_CON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MLOG_WARN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ismaster: the server name (%s) did not match with what we thought it&#39;d be (%s).&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connected_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;we_think_we_are&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;cm&quot;&gt;/* We reset the name as the server responded with a different name than
+             * what we thought it was */&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;free&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;host&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mcon_strndup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connected_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strchr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connected_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&#39;:&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connected_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;port&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;atoi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strchr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connected_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&#39;:&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;retval&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;section&quot;&gt;原因二: 建立链接时发现缓存连接不可用&lt;/h4&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$mongo = new MongoClient(&quot;mongodb://127.0.0.1:27018&quot;,
+              array(
+           &#39;replicaSet&#39; =&amp;gt; &#39;rs0&#39;,
+                   &#39;connect&#39; =&amp;gt; true,
+                   &#39;connectTimeoutMS&#39; =&amp;gt; 10000
+        )); \\这里会报No candidate servers found错误
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h4 id=&quot;connectfalse-&quot;&gt;原因三: 创建链接指定connect为false, 在查询或者修改删除时发现连接不可用&lt;/h4&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$mongo = new MongoClient(&quot;mongodb://127.0.0.1:27018&quot;,
+              array(
+           &#39;replicaSet&#39; =&amp;gt; &#39;rs0&#39;,
+                   &#39;connect&#39; =&amp;gt; false,
+                   &#39;connectTimeoutMS&#39; =&amp;gt; 10000
+        ));
+        
+$collection = $mongo-&amp;gt;test-&amp;gt;test;
+$cusor = $collection-&amp;gt;find()-&amp;gt;limit(5);
+foreach($cusor as $doc) { \\这里会报No candidate servers found错误
+    echo getmypid() .json_encode($doc) . &quot;\n&quot;;
+}       
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h4 id=&quot;section-1&quot;&gt;问题出现场景&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;mongodb服务器挂掉&lt;/li&gt;
+  &lt;li&gt;mongodb主挂掉，选举期间&lt;/li&gt;
+  &lt;li&gt;mongodb服务器挂掉恢复正常，第一次访问由于缓存长连接失效导致&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;第三种情况，如果PHP与mongodb采用的是长链接，没有主动close，那么可能会导致这个报错持续很长时间。因为每一个php-fpm进程链接之前故障服务器的缓存链接都不可用了，当第一次访问时就会发生失败，会把失效的链接释放，第二次访问会重新建立链接就OK了。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;问题解决&lt;/h2&gt;
+&lt;p&gt;mongo.so扩展经过测试，都会存在这个问题，有几种方式可以解决:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;php与mongodb之间建立链接，使用完成后主动调用close，即每次使用短链接。&lt;/li&gt;
+  &lt;li&gt;如果建立链接时指定connect=true，建议增加重试机制，保证链接成功。
+    &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$retry = 2;
+do {
+  try {
+      $mongo = new MongoClient(&quot;mongodb://127.0.0.1:27018&quot;,
+                    array(
+                 &#39;replicaSet&#39; =&amp;gt; &#39;rs0&#39;,
+                         &#39;connect&#39; =&amp;gt; true,
+                         &#39;connectTimeoutMS&#39; =&amp;gt; 10000
+              ));
+      break;
+  } catch(MongoException $e) {
+      if (0 == $retry--) {
+          //log 
+          return;
+      }
+  }
+} while($retry);
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;如果建立链接时指定connect=false，建议在读写mongodb时增加重试机制，参考如上代码。&lt;/li&gt;
+  &lt;li&gt;如果您当前使用的PHP版本大于等于5.4，建议使用mongodb.so扩展，具体里面代码没有看过，但是经过实测发现该扩展已经包含了重试的机制在里面。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 12 May 2018 00:00:00 +0800</pubDate>
+        <link>http://khadgar.me/2018/05/12/PHP-mongo-extension-issue/</link>
+        <guid isPermaLink="true">http://khadgar.me/2018/05/12/PHP-mongo-extension-issue/</guid>
+        
+        <category>mongo扩展</category>
+        
+        
+      </item>
     
       <item>
         <title>软件管理</title>

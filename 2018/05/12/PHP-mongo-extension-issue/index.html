@@ -10,9 +10,9 @@
     <meta name="keywords"  content="">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>软件管理 - 卡德加的博客 | Khadgar Blog</title>
+    <title>PHP - 卡德加的博客 | Khadgar Blog</title>
 
-    <link rel="canonical" href="http://khadgar.me/2017/02/06/Software-management-Software/">
+    <link rel="canonical" href="http://khadgar.me/2018/05/12/PHP-mongo-extension-issue/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -186,19 +186,15 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#软件" title="软件">软件</a>
-                        
-                        <a class="tag" href="/tags/#依赖管理" title="依赖管理">依赖管理</a>
-                        
-                        <a class="tag" href="/tags/#PHP" title="PHP">PHP</a>
+                        <a class="tag" href="/tags/#mongo扩展" title="mongo扩展">mongo扩展</a>
                         
                     </div>
-                    <h1>软件管理</h1>
+                    <h1>PHP</h1>
                     
                     
-                    <h2 class="subheading">Software</h2>
+                    <h2 class="subheading">mongo扩展之No candidate servers found</h2>
                     
-                    <span class="meta">Posted by Khadgar on February 6, 2017</span>
+                    <span class="meta">Posted by Khadgar on May 12, 2018</span>
                 </div>
             </div>
         </div>
@@ -216,113 +212,289 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-				<h2 id="section">包管理工具</h2>
-<p>软件开发过程中，会用到第三方库，但是这些第三方库或者框架往往又依赖其他第三方库或者框架，如果手工管理依赖关系会非常复杂，因为不仅要下载而且还要处理包之间的兼容关系，并且如果要进行更新版本那更是痛苦。<br />
-其主要功能就是安装及安装依赖，更新，卸载等操作。</p>
-
-<h4 id="section-1">主流包管理工具</h4>
+				<h2 id="mongo">mongo扩展</h2>
+<p>PHP的Mongodb扩展有两种, mongo.so和 mongodb.so,其中mongodb.so为最新的扩展，mongo.so已经不推荐使用。</p>
+<h4 id="mongophp">mongo扩展版本对应PHP版本</h4>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: left">语言</th>
-      <th style="text-align: left">包管理工具</th>
-      <th style="text-align: left">配置文件</th>
+      <th style="text-align: left">PHP Driver</th>
+      <th style="text-align: left">PHP 5.3</th>
+      <th style="text-align: left">PHP 5.4</th>
+      <th style="text-align: left">PHP 5.5</th>
+      <th style="text-align: left">PHP 5.6</th>
+      <th style="text-align: left">PHP 7.0</th>
+      <th style="text-align: left">PHP 7.1</th>
+      <th style="text-align: left">PHP 7.2</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">Node.js</td>
-      <td style="text-align: left">NPM</td>
-      <td style="text-align: left">package.json</td>
+      <td style="text-align: left">mongodb-1.4</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
     </tr>
     <tr>
-      <td style="text-align: left">前端JS</td>
-      <td style="text-align: left">Bower</td>
-      <td style="text-align: left">bower.json</td>
+      <td style="text-align: left">mongodb-1.3</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
     </tr>
     <tr>
-      <td style="text-align: left">Java</td>
-      <td style="text-align: left">Maven</td>
-      <td style="text-align: left">pom.xml</td>
+      <td style="text-align: left">mongodb-1.2</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
     </tr>
     <tr>
-      <td style="text-align: left">Python</td>
-      <td style="text-align: left">Pip</td>
-      <td style="text-align: left">pip.conf(ini)</td>
+      <td style="text-align: left">mongodb-1.1</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
     </tr>
     <tr>
-      <td style="text-align: left">Ruby</td>
-      <td style="text-align: left">Gem</td>
-      <td style="text-align: left">.gemspec</td>
+      <td style="text-align: left">mongodb-1.0</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
     </tr>
     <tr>
-      <td style="text-align: left">Php</td>
-      <td style="text-align: left">Composer</td>
-      <td style="text-align: left">composer.json</td>
+      <td style="text-align: left">mongo-1.6</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mongo-1.5</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mongo-1.4</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mongo-1.3</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
     </tr>
   </tbody>
 </table>
 
-<h4 id="php">PHP包管理工具</h4>
-<p>PHP包管理工具有PEAR，PECL，Composer。</p>
+<h4 id="mongomongodb">mongo扩展版本对应mongodb的版本</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">PHP Driver</th>
+      <th style="text-align: left">MongoDB 2.6</th>
+      <th style="text-align: left">MongoDB 3.0</th>
+      <th style="text-align: left">MongoDB 3.2</th>
+      <th style="text-align: left">MongoDB 3.4</th>
+      <th style="text-align: left">MongoDB 3.6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">PHPLIB 1.3 + mongodb-1.4</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PHPLIB 1.2 + mongodb-1.3</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PHPLIB 1.1 + mongodb-1.2</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PHPLIB 1.0 + mongodb-1.1</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mongodb-1.0</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mongo-1.6</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mongo-1.5</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mongo-1.4</td>
+      <td style="text-align: left">✓</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="mongoso">mongo.so用法</h4>
+<p><a href="http://php.net/manual/en/book.mongo.php" target="_blank">传送门</a></p>
+<h4 id="mongodbso">mongodb.so用法</h4>
+<p><a href="http://php.net/manual/en/set.mongodb.php" target="_blank">传送门</a></p>
+
+<h2 id="no-candidate-servers-foundmongoso">No candidate servers found(mongo.so扩展)</h2>
+<h4 id="mongodbphp">原因一: mongodb配置的地址和php里使用的地址不一致</h4>
 <ul>
-  <li>PEAR<br />
-Php Extension Application Repository php 扩展和应用仓库，为 php 的工具类库。</li>
-  <li>PECL<br />
-PHP Extension Community Library php 的 C 扩展仓库，即 php 的 so 格式的扩展</li>
-  <li>Composer<br />
-PHP依赖管理工具
-    <h6 id="pear-vs-pecl">PEAR VS PECL</h6>
-    <p>PEAR是用PHP写的库，PECL是用C写的PHP扩展库。</p>
+  <li>mongodb server配置为机器名而php里使用的链接地址是ip</li>
+  <li>mongodb server配置为ip而php里使用的链接地址是机器名</li>
+</ul>
+
+<p>扩展C相关代码</p>
+<div class="language-c highlighter-rouge"><pre class="highlight"><code>    <span class="c1">//connections.c&gt;mongo_discover_topology&gt;mongo_connection_ismaster
+</span>    <span class="k">if</span> <span class="p">(</span><span class="n">bson_find_field_as_string</span><span class="p">(</span><span class="n">ptr</span><span class="p">,</span> <span class="s">"me"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">connected_name</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">we_think_we_are</span> <span class="o">=</span> <span class="n">mongo_server_hash_to_server</span><span class="p">(</span><span class="n">con</span><span class="o">-&gt;</span><span class="n">hash</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">connected_name</span><span class="p">,</span> <span class="n">we_think_we_are</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">mongo_manager_log</span><span class="p">(</span><span class="n">manager</span><span class="p">,</span> <span class="n">MLOG_CON</span><span class="p">,</span> <span class="n">MLOG_FINE</span><span class="p">,</span> <span class="s">"ismaster: the server name matches what we thought it'd be (%s)."</span><span class="p">,</span> <span class="n">we_think_we_are</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">mongo_manager_log</span><span class="p">(</span><span class="n">manager</span><span class="p">,</span> <span class="n">MLOG_CON</span><span class="p">,</span> <span class="n">MLOG_WARN</span><span class="p">,</span> <span class="s">"ismaster: the server name (%s) did not match with what we thought it'd be (%s)."</span><span class="p">,</span> <span class="n">connected_name</span><span class="p">,</span> <span class="n">we_think_we_are</span><span class="p">);</span>
+            <span class="cm">/* We reset the name as the server responded with a different name than
+             * what we thought it was */</span>
+            <span class="n">free</span><span class="p">(</span><span class="n">server</span><span class="o">-&gt;</span><span class="n">host</span><span class="p">);</span>
+            <span class="n">server</span><span class="o">-&gt;</span><span class="n">host</span> <span class="o">=</span> <span class="n">mcon_strndup</span><span class="p">(</span><span class="n">connected_name</span><span class="p">,</span> <span class="n">strchr</span><span class="p">(</span><span class="n">connected_name</span><span class="p">,</span> <span class="sc">':'</span><span class="p">)</span> <span class="o">-</span> <span class="n">connected_name</span><span class="p">);</span>
+            <span class="n">server</span><span class="o">-&gt;</span><span class="n">port</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">strchr</span><span class="p">(</span><span class="n">connected_name</span><span class="p">,</span> <span class="sc">':'</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+            <span class="n">retval</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+        <span class="p">}</span>
+</code></pre>
+</div>
+
+<h4 id="section">原因二: 建立链接时发现缓存连接不可用</h4>
+<div class="language-php highlighter-rouge"><pre class="highlight"><code>$mongo = new MongoClient("mongodb://127.0.0.1:27018",
+              array(
+           'replicaSet' =&gt; 'rs0',
+                   'connect' =&gt; true,
+                   'connectTimeoutMS' =&gt; 10000
+        )); \\这里会报No candidate servers found错误
+</code></pre>
+</div>
+<h4 id="connectfalse-">原因三: 创建链接指定connect为false, 在查询或者修改删除时发现连接不可用</h4>
+<div class="language-php highlighter-rouge"><pre class="highlight"><code>$mongo = new MongoClient("mongodb://127.0.0.1:27018",
+              array(
+           'replicaSet' =&gt; 'rs0',
+                   'connect' =&gt; false,
+                   'connectTimeoutMS' =&gt; 10000
+        ));
+        
+$collection = $mongo-&gt;test-&gt;test;
+$cusor = $collection-&gt;find()-&gt;limit(5);
+foreach($cusor as $doc) { \\这里会报No candidate servers found错误
+    echo getmypid() .json_encode($doc) . "\n";
+}       
+</code></pre>
+</div>
+<h4 id="section-1">问题出现场景</h4>
+<ul>
+  <li>mongodb服务器挂掉</li>
+  <li>mongodb主挂掉，选举期间</li>
+  <li>mongodb服务器挂掉恢复正常，第一次访问由于缓存长连接失效导致</li>
+</ul>
+
+<p>第三种情况，如果PHP与mongodb采用的是长链接，没有主动close，那么可能会导致这个报错持续很长时间。因为每一个php-fpm进程链接之前故障服务器的缓存链接都不可用了，当第一次访问时就会发生失败，会把失效的链接释放，第二次访问会重新建立链接就OK了。</p>
+
+<h2 id="section-2">问题解决</h2>
+<p>mongo.so扩展经过测试，都会存在这个问题，有几种方式可以解决:</p>
+<ul>
+  <li>php与mongodb之间建立链接，使用完成后主动调用close，即每次使用短链接。</li>
+  <li>如果建立链接时指定connect=true，建议增加重试机制，保证链接成功。
+    <div class="language-php highlighter-rouge"><pre class="highlight"><code>$retry = 2;
+do {
+  try {
+      $mongo = new MongoClient("mongodb://127.0.0.1:27018",
+                    array(
+                 'replicaSet' =&gt; 'rs0',
+                         'connect' =&gt; true,
+                         'connectTimeoutMS' =&gt; 10000
+              ));
+      break;
+  } catch(MongoException $e) {
+      if (0 == $retry--) {
+          //log 
+          return;
+      }
+  }
+} while($retry);
+</code></pre>
+    </div>
   </li>
+  <li>如果建立链接时指定connect=false，建议在读写mongodb时增加重试机制，参考如上代码。</li>
+  <li>如果您当前使用的PHP版本大于等于5.4，建议使用mongodb.so扩展，具体里面代码没有看过，但是经过实测发现该扩展已经包含了重试的机制在里面。</li>
 </ul>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>#这是一个安装 pear 的 php 发行包文件
-wget http://pear.php.net/go-pear.phar
-
-#执行安装pear和pecl
-php go-pear.phar
-
-#pear安装DB
-pear install DB
-
-#pecl安装Redis,生成redis.so，加入到php.ini即可
-pecl install redis
-
-</code></pre>
-</div>
-
-<h6 id="pear-vs-composer">PEAR VS Composer</h6>
-<p>两者都可以用来管理PHP软件包，安装、更新以及卸载。
-PEAR对于包的维护者来说，比较麻烦。所以很多代码已经过期了；此外相比Composer，PEAR的安装软件包比较少；使用Composer，可以基于每个项目或者全局安装软件包，而PEAR只能全局安装，如果需要不同版本的话可能造成冲突；Composer通过配置可以安装PEAR扩展包.</p>
-
-<h2 id="composer">Composer</h2>
-<h4 id="section-2">安装</h4>
-<p>Composer要求PHP环境必须是5.3.2+才能运行。</p>
-<div class="highlighter-rouge"><pre class="highlight"><code> curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
-</code></pre>
-</div>
-<h4 id="section-3">使用</h4>
-<p>在项目目录下创建一个 composer.json 文件，指明依赖，比如，你的项目依赖 monolog：</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"require"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"monolog/monolog"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2.*"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
-
-<ul>
-  <li>安装<br />
-composer install</li>
-  <li>自动加载<br />
-Composer 提供了自动加载的特性，require ‘vendor/autoload.php’，需要在代码初始化时增加这行代码。</li>
-</ul>
-
-<p>延伸阅读 https://getcomposer.org/</p>
-
 
 
                 <hr>
@@ -333,19 +505,12 @@ Composer 提供了自动加载的特性，require ‘vendor/autoload.php’，�
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2017/01/20/Software-management-System/" data-toggle="tooltip" data-placement="top" title="软件管理">
+                        <a href="/2017/02/06/Software-management-Software/" data-toggle="tooltip" data-placement="top" title="软件管理">
                         Previous<br>
                         <span>软件管理</span>
                         </a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/2018/05/12/PHP-mongo-extension-issue/" data-toggle="tooltip" data-placement="top" title="PHP">
-                        Next<br>
-                        <span>PHP</span>
-                        </a>
-                    </li>
                     
                 </ul>
 
@@ -432,8 +597,8 @@ Composer 提供了自动加载的特性，require ‘vendor/autoload.php’，�
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "khadgarmage";
-    var disqus_identifier = "/2017/02/06/Software-management-Software";
-    var disqus_url = "http://khadgar.me/2017/02/06/Software-management-Software/";
+    var disqus_identifier = "/2018/05/12/PHP-mongo-extension-issue";
+    var disqus_url = "http://khadgar.me/2018/05/12/PHP-mongo-extension-issue/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
